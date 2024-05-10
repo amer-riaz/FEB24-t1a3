@@ -82,15 +82,18 @@ def view_todo(file_name):
             reader.__next__()
             
             # printing list items
-            print("\nShopping List:");
+            print("\nShopping List:")
             # loop thru the list
             for row in reader:
                 if (row[1] == "DONE"):
                     print(f"{row[0]}: DONE")
                 else:
                     print(f"{row[0]}: TO BUY")
+            else:
+                # list is empty, prompt the user
+                print("No items in the list.")
             # print empty string; by default it prints carriage return
             print("");
     
     except FileNotFoundError:
-        print("The list file doesn't exist. Add item(s).")
+        print("The list file doesn't exist.")
