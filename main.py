@@ -2,6 +2,9 @@
 # implementation of the main logic of the app
 
 
+# System packages
+import os.path
+
 
 # Imports of our own functions from other files
 from todo_functions import add_todo, remove_todo, mark_todo, view_todo
@@ -22,6 +25,19 @@ def create_menu():
     user_choice = input("Enter your selection: ")
     return user_choice
 
+
+# csv file is comma separated file
+file_name = "list.csv"
+
+# if the csv file doesn't exist, create the file
+if (not os.path.isfile(file_name)):
+    print("Creating file as it doesn't exist")
+    # create the file
+    todo_file = open(file_name, "w")
+    # enter the headings into the file
+    todo_file.write("title,completed\n")
+    # close the file
+    todo_file.close()
 
 # variable to record user's selection
 choice = ""
