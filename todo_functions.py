@@ -22,6 +22,22 @@ def remove_todo(file_name):
     # print("Remove todo")
     todo_name = input("Enter the list item that you want to remove: ")
 
+    # create a new list
+    todo_lists = []
+
+    # put all the items into the list except the one they want to delete
+    with open(file_name) as f:
+        reader = csv.reader(f)
+        is_exist = False
+        for row in reader:
+            if (todo_name != row[0]):
+                todo_lists.append(row)
+            else:
+                is_exist = True
+    if not is_exist:
+        print("No item with that name exists.")
+
+
 
 # function for marking an item
 def mark_todo():
