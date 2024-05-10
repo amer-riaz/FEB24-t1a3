@@ -31,6 +31,7 @@ def remove_todo(file_name):
     # put all the items into the list except the one user wants to remove
     with open(file_name) as f:
         reader = csv.reader(f)
+        # signal for item existence
         is_exist = False
         for row in reader:
             if (todo_name != row[0]):
@@ -58,14 +59,16 @@ def mark_todo(file_name):
     # create an empty list for items
     todo_lists = []
 
-    # is_exist = 
-
     # counter for number of items
     i = 0
+
+    # signal for item existence
+    is_exist = False
 
     # prepare the updated list
     with open(file_name, "r") as f:
         reader = csv.reader(f)
+        # loop thru the rows
         for row in reader:
             # count each item
             i += 1
@@ -73,14 +76,21 @@ def mark_todo(file_name):
                 todo_lists.append(row)
             else:
                 todo_lists.append([row[0], "DONE"])
+                # item existing, update signal
+                is_exist = True
     
     # check if list has items, header doesn't count
     if i > 1:
         # list is not empty
-        # write the updated list to the list file
-        with open(file_name, "w") as f:
-            writer = csv.writer(f)
-            writer.writerows(todo_lists)
+        # check if item existed
+        if is_exist == True:
+            # write the updated list to the list file
+            with open(file_name, "w") as f:
+                writer = csv.writer(f)
+                writer.writerows(todo_lists)
+        else:
+            # item doesn't exist in the list, prompt user
+            print("No item with that name exists.")
     else:
         # list is empty, prompt user
         print("No items in the list.")
