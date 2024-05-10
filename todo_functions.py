@@ -58,20 +58,33 @@ def mark_todo(file_name):
     # create an empty list for items
     todo_lists = []
 
+    # is_exist = 
+
+    # counter for number of items
+    i = 0
+
     # prepare the updated list
     with open(file_name, "r") as f:
         reader = csv.reader(f)
         for row in reader:
+            # count each item
+            i += 1
             if (todo_name != row[0]):
                 todo_lists.append(row)
             else:
                 todo_lists.append([row[0], "DONE"])
-
-    # write the updated list to the list file
-    with open(file_name, "w") as f:
-        writer = csv.writer(f)
-        writer.writerows(todo_lists)
     
+    # check if list has items, header doesn't count
+    if i > 1:
+        # list is not empty
+        # write the updated list to the list file
+        with open(file_name, "w") as f:
+            writer = csv.writer(f)
+            writer.writerows(todo_lists)
+    else:
+        # list is empty, prompt user
+        print("No items in the list.")
+
     # print empty string; by default it prints carriage return
     print("")
 
