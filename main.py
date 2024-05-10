@@ -42,19 +42,25 @@ if (not os.path.isfile(file_name)):
 # variable to record user's selection
 choice = ""
 
+# main loop to keep asking for selection until 5 is input to exit
 while choice != "5":
+    # print the menu and save user's selection
     choice = create_menu()
 
+    # perform according to user's selection
     if (choice == "1"):
-        # print("Item added.")
-        add_todo()
+        # add item given by user
+        add_todo(file_name)
     elif (choice == "2"):
+        # remove item specified by user
         # print("Item removed.")
         remove_todo()
     elif (choice == "3"):
+        # mark item specified by user
         # print("Item marked.")
         mark_todo()
     elif (choice == "4"):
+        # print the list
         # print("List printed.")
         view_todo()
     elif (choice == "5"):
