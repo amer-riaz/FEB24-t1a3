@@ -62,7 +62,7 @@ while choice != "5":
     elif (choice == "4"):
         # print the list
         # print("List printed.")
-        view_todo()
+        view_todo(file_name)
     elif (choice == "5"):
         print("You entered 5 to exit.")
     else:

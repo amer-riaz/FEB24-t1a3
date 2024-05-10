@@ -28,5 +28,22 @@ def mark_todo():
 
 
 # function for viewing the list
-def view_todo():
-    print("View todo")
+def view_todo(file_name):
+    # with block for printing the list
+    with open(file_name, "r") as f:
+        # file exists
+        
+        # use reader object from csv package for reading from the csv file
+        reader = csv.reader(f)
+
+        # we don't need the header row; so we skip it
+        reader.__next__()
+        
+        # printing list items
+        print("\nShopping List:");
+        for row in reader:
+            if (row[1] == "DONE"):
+                print(f"{row[0]}: DONE")
+            else:
+                print(f"{row[0]}: TO BUY")
+        print("\n");
