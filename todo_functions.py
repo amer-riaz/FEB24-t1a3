@@ -45,12 +45,21 @@ def remove_todo(file_name):
 
 
 # function for marking an item
-def mark_todo():
-    print("Mark item")
+def mark_todo(file_name):
     # prompt user to input item to be marked DONE
     todo_name = input("Enter the item that you want to mark as DONE: ")
+
     # create an empty list for items
     todo_lists = []
+
+    # prepare the updated list
+    with open(file_name, "r") as f:
+        reader = csv.reader(f)
+        for row in reader:
+            if (todo_name != row[0]):
+                todo_lists.append(row)
+            else:
+                todo_lists.append([row[0], "DONE"])
 
 
 # function for viewing the list

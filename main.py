@@ -57,7 +57,7 @@ while choice != "5":
     elif (choice == "3"):
         # mark item specified by user
         # print("Item marked.")
-        mark_todo()
+        mark_todo(file_name)
     elif (choice == "4"):
         # print the list
         view_todo(file_name)
