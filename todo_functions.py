@@ -46,7 +46,11 @@ def remove_todo(file_name):
 
 # function for marking an item
 def mark_todo():
-    print("Mark todo")
+    print("Mark item")
+    # prompt user to input item to be marked DONE
+    todo_name = input("Enter the item that you want to mark as DONE: ")
+    # create an empty list for items
+    todo_lists = []
 
 
 # function for viewing the list
