@@ -89,8 +89,8 @@ def view_todo(file_name):
                     print(f"{row[0]}: DONE")
                 else:
                     print(f"{row[0]}: TO BUY")
-            # print carriage return
-            print("\n");
+            # print empty string; by default it prints carriage return
+            print("");
     
     except FileNotFoundError:
         print("The list file doesn't exist. Add item(s).")

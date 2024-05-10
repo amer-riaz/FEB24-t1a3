@@ -62,7 +62,9 @@ while choice != "5":
         # print the list
         view_todo(file_name)
     elif (choice == "5"):
-        print("You entered 5 to exit.")
+        # print("You entered 5 to exit.")
+        # print empty string; by default it prints carriage return
+        print("")
     else:
         print("Please only enter the options shown above.")
 
