@@ -61,6 +61,12 @@ def mark_todo(file_name):
             else:
                 todo_lists.append([row[0], "DONE"])
 
+    # write the updated list to the list file
+    with open(file_name, "w") as f:
+        writer = csv.writer(f)
+        writer.writerows(todo_lists)
+    
+
 
 # function for viewing the list
 def view_todo(file_name):
