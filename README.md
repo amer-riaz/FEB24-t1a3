@@ -14,8 +14,8 @@ URL: https://peps.python.org/pep-0008/
 The following menu options are presented by the app and user can input their selection number:
 1. Enter 1 to ADD item to the list.
 2. Enter 2 to REMOVE item from the list.
-3. Enter 3 to MARK any item as complete.
-4. Enter 4 to VIEW todo list items.
+3. Enter 3 to MARK an item as done.
+4. Enter 4 to VIEW list items.
 5. Enter 5 to EXIT.
 Enter your selection:
 
@@ -29,12 +29,12 @@ If user inputs 2, they are requested to input the item name like:
 Enter name of the item to remove: 
 User then inputs the name. The app then removes the item from the list.
 
-### 3. Enter 3 to MARK any item as complete.
+### 3. Enter 3 to MARK an item as done.
 If user inputs 3, they are requested to input the item name like:
 Enter name of the item to mark: 
 User then inputs the name. The app then marks the item DONE.
 
-### 4. Enter 4 to VIEW todo list items.
+### 4. Enter 4 to VIEW list items.
 If user inputs 4, the app prints the items in the list, for example:
 Apples, TO BUY
 Oranges, DONE
