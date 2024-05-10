@@ -17,7 +17,7 @@ def add_todo(file_name):
         writer.writerow([todo_name, "TO BUY"])
 
     # print empty string; by default it prints carriage return
-    print("");
+    print("")
 
 
 # function for removing item from the list
@@ -28,7 +28,7 @@ def remove_todo(file_name):
     # create a new list
     todo_lists = []
 
-    # put all the items into the list except the one they want to delete
+    # put all the items into the list except the one user wants to remove
     with open(file_name) as f:
         reader = csv.reader(f)
         is_exist = False
@@ -38,14 +38,16 @@ def remove_todo(file_name):
             else:
                 is_exist = True
     if not is_exist:
-        print("No item with that name exists.\n")
+        print("No item with that name exists.")
 
     # write the entire list.csv file with this new list
     with open(file_name, "w") as f:
         writer = csv.writer(f)
         # use writerows function to write the entire list of rows to the file
         writer.writerows(todo_lists)
-
+    
+    # print empty string; by default it prints carriage return
+    print("")
 
 # function for marking an item
 def mark_todo(file_name):
@@ -102,7 +104,7 @@ def view_todo(file_name):
                 print("No items in the list.")
             
             # print empty string; by default it prints carriage return
-            print("");
+            print("")
     
     except FileNotFoundError:
         print("The list file doesn't exist.")
