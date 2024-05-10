@@ -18,8 +18,9 @@ def add_todo(file_name):
 
 
 # function for removing item from the list
-def remove_todo():
-    print("Remove todo")
+def remove_todo(file_name):
+    # print("Remove todo")
+    todo_name = input("Enter the list item that you want to remove: ")
 
 
 # function for marking an item

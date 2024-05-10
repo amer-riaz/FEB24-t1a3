@@ -53,15 +53,13 @@ while choice != "5":
         add_todo(file_name)
     elif (choice == "2"):
         # remove item specified by user
-        # print("Item removed.")
-        remove_todo()
+        remove_todo(file_name)
     elif (choice == "3"):
         # mark item specified by user
         # print("Item marked.")
         mark_todo()
     elif (choice == "4"):
         # print the list
-        # print("List printed.")
         view_todo(file_name)
     elif (choice == "5"):
         print("You entered 5 to exit.")
