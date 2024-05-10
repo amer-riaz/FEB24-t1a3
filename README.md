@@ -42,3 +42,8 @@ bread, TO BUY
 
 ### 5. Enter 5 to EXIT.
 If user inputs 5, the app terminates.
+
+## Implementation Plan
+Used Trello to plan implementation.
+URL: https://trello.com/b/Zgf0w0ef/amerriazt1w8-terminal-app
+Screenshot: docs/Terminal App Implementation Plan.png
