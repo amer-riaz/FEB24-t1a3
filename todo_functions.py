@@ -16,6 +16,9 @@ def add_todo(file_name):
         writer = csv.writer(f)
         writer.writerow([todo_name, "TO BUY"])
 
+    # print empty string; by default it prints carriage return
+    print("");
+
 
 # function for removing item from the list
 def remove_todo(file_name):
@@ -83,7 +86,8 @@ def view_todo(file_name):
             
             # printing list items
             print("\nShopping List:")
-            # loop thru the list counting items
+            
+            # loop thru the list counting items and print items if any
             i = 0
             for row in reader:
                 i += 1
@@ -91,9 +95,12 @@ def view_todo(file_name):
                     print(f"{row[0]}: DONE")
                 else:
                     print(f"{row[0]}: TO BUY")
+            
+            # empty list
             if i == 0:
                 # list is empty, prompt the user
                 print("No items in the list.")
+            
             # print empty string; by default it prints carriage return
             print("");
     
