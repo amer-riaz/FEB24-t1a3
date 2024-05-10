@@ -45,7 +45,10 @@ def remove_todo(file_name):
         writer = csv.writer(f)
         # use writerows function to write the entire list of rows to the file
         writer.writerows(todo_lists)
-    
+
+    # print empty string; by default it prints carriage return
+    print("")
+
 
 # function for marking an item
 def mark_todo(file_name):
