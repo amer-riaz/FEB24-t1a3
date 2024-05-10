@@ -37,6 +37,11 @@ def remove_todo(file_name):
     if not is_exist:
         print("No item with that name exists.")
 
+    # write the entire list.csv file with this new list
+    with open(file_name, "w") as f:
+        writer = csv.writer(f)
+        # use writerows function to write the entire list of rows to the file
+        writer.writerows(todo_lists)
 
 
 # function for marking an item
