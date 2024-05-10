@@ -35,7 +35,7 @@ def remove_todo(file_name):
             else:
                 is_exist = True
     if not is_exist:
-        print("No item with that name exists.")
+        print("No item with that name exists.\n")
 
     # write the entire list.csv file with this new list
     with open(file_name, "w") as f:
@@ -64,11 +64,13 @@ def view_todo(file_name):
             
             # printing list items
             print("\nShopping List:");
+            # loop thru the list
             for row in reader:
                 if (row[1] == "DONE"):
                     print(f"{row[0]}: DONE")
                 else:
                     print(f"{row[0]}: TO BUY")
+            # print carriage return
             print("\n");
     
     except FileNotFoundError:
