@@ -7,7 +7,7 @@ https://github.com/amer-riaz/FEB24-t1a3.git
 This terminal application written in Python3 is a basic terminal application. It lets the user create a shopping list with one or more items. The app stores the shopping list in a CSV file on the file system. Each item is by default marked 'to buy'. As the user has bought some item, they can use the application to mark the item 'done', one at a time. The user can add new items to the list, one at a time. Similarly, the user can change or remove items, one at a time. After using the application user can quit the application using.
 
 ## Coding Style Guide
-PEP8 Style Guide followed
+PEP8 Style Guide followed<br>
 URL: https://peps.python.org/pep-0008/
 
 ## List of Features
@@ -44,6 +44,6 @@ bread, TO BUY
 If user inputs 5, the app terminates.
 
 ## Implementation Plan
-Used Trello to plan implementation.
-URL: https://trello.com/b/Zgf0w0ef/amerriazt1w8-terminal-app
+Used Trello to plan implementation.<br>
+URL: https://trello.com/b/Zgf0w0ef/amerriazt1w8-terminal-app<br>
 Screenshot: docs/Terminal App Implementation Plan.png
