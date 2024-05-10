@@ -83,13 +83,15 @@ def view_todo(file_name):
             
             # printing list items
             print("\nShopping List:")
-            # loop thru the list
+            # loop thru the list counting items
+            i = 0
             for row in reader:
+                i += 1
                 if (row[1] == "DONE"):
                     print(f"{row[0]}: DONE")
                 else:
                     print(f"{row[0]}: TO BUY")
-            else:
+            if i == 0:
                 # list is empty, prompt the user
                 print("No items in the list.")
             # print empty string; by default it prints carriage return
