@@ -47,3 +47,10 @@ If user inputs 5, the app terminates.
 Used Trello to plan implementation.<br>
 URL: https://trello.com/b/Zgf0w0ef/amerriazt1w8-terminal-app<br>
 Screenshot: docs/Terminal App Implementation Plan.png
+
+## Help
+This section explains how to make executable out of the source code:
+- download the source code from URL of the GitHub repo given above
+- in the terminal go to the folder where you downloaded the source
+- run chmod +x run.sh
+- run ./run.sh to run the executable run.sh
