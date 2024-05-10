@@ -11,7 +11,7 @@ from todo_functions import add_todo, remove_todo, mark_todo, view_todo
 
 
 # print a welcome message
-print("Welcome to the Shopping list app.")
+print("\nWelcome to the Shopping list app.")
 
 
 # function to present app menu
@@ -70,4 +70,4 @@ while choice != "5":
 
 
 # exit the app saying Thank You to user
-print("Thank you for using my Shopping list app.")
+print("Thank you for using my Shopping list app.\n")

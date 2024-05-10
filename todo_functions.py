@@ -14,7 +14,7 @@ def add_todo(file_name):
     with open(file_name, "a") as f:
         # use a writer object that helps us writing to the csv file
         writer = csv.writer(f)
-        writer.writerow([todo_name, "DONE"])
+        writer.writerow([todo_name, "TO BUY"])
 
 
 # function for removing item from the list
